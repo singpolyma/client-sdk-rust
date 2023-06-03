@@ -125,7 +125,7 @@ pub mod utils {
     use super::SignalEvents;
 
     #[instrument(level = Level::DEBUG, skip(receiver))]
-    pub(crate) async fn next_join_response(
+    pub async fn next_join_response(
         receiver: &mut SignalEvents,
     ) -> SignalResult<proto::JoinResponse> {
         let join = async {
